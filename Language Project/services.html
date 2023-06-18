@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
+  <style>
+    /* Additional styles for the split-screen layout */
+    .container {
+      display: flex;
+    }
+    .left-panel {
+      flex: 1;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .right-panel {
+      flex: 2;
+      padding: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- <header>
+    <h1>Our Services</h1>
+    
+  </header> -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Select Country</a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><img src="flag-usa.png" alt="USA Flag"> USA</a></li>
+          <li><a href="#"><img src="flag-uk.png" alt="UK Flag"> UK</a></li>
+          <li><a href="#"><img src="flag-france.png" alt="France Flag"> France</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+ 
+
+  <main>
+    <div class="container">
+      <div class="left-panel">
+
+        <div>
+            <button onclick = "randomFunc()" class="big-button">Random</button>
+            <button onclick="showOverlay()" class="big-button">Custom</button>
+            <!-- I am putting the overlay below -->
+            <div id="overlay" class="overlay">
+              <div class="overlay-content">
+                <h2>Custom Scenario</h2>
+                <p>Enter a custom scenario to simulate in your desired language.</p>
+                <input type="text" id = "textInput" placeholder="Enter your text">
+                <button onclick="processInput()">Submit</button>
+                <button onclick="hideOverlay()">Close</button>
+              </div>
+            </div>
+
+        </div>
+        <div class="spacer"></div>
+
+        <div class = scrollable>
+
+            
+
+          <button onclick="changeImage('restaurant.jpeg')" class="rectangle-button">
+            <h2>Restaurant</h2>
+            <p>Make an order with your server.</p>
+        </button>
+
+        <!-- <button onClick="changeImage()">MYBTN</button> -->
+        
+            <div class="spacer"></div>
+    
+            <button onclick="changeImage('dogpark.jpeg')" class = "rectangle-button">
+                <h2>Dog Park</h2>
+            <p>Take your pet for a stroll at the park.</p>
+            </button>
+    
+            <div class="spacer"></div>
+            
+            <button onclick="changeImage('grocerystore.jpeg')"class = "rectangle-button">
+                <h2>Grocery store</h2>
+            <p>Reload your groceries for the week.</p>
+            </button>
+    
+            <div class="spacer"></div>
+    
+            <button class = "rectangle-button">
+                <h2>Airport</h2>
+            <p>You've just arrived to a new country.</p>
+            </button>
+    
+            <div class="spacer"></div>
+            <button class = "rectangle-button">
+                <h2>Airport</h2>
+            <p>You've just arrived to a new country.</p>
+            </button>
+    
+            <div class="spacer"></div>
+            <button class = "rectangle-button">
+                <h2>Airport</h2>
+            <p>You've just arrived to a new country.</p>
+            </button>
+    
+            <div class="spacer"></div>
+
+
+        </div>
+        
+
+      </div>
+      
+
+      <div class="right-panel">
+        <div class = "top-view"> 
+            <h2>Top View</h2>
+            <img src="cali.jpeg" class = "responsive" id = "image" width="300" height="200">
+            <!-- <button onclick="changeImage()">MY BTN</button> -->
+            <p>Our front-end developers specialize in crafting interactive and responsive web interfaces.</p>
+        
+        </div>
+
+        <div class ="spacer"> </div>
+
+         <!-- live transcript -->    
+        <div class="transcript-container">
+          <div class="transcript-bar">
+            <div class = "transcript-rectangle">
+            <h2>Transcript 1</h2>
+            <p>Transcript content goes here...</p>
+            </div>
+          </div>
+
+          <!-- corrected transcript -->
+          <div class="transcript-bar">
+            <div class = "transcript-rectangle">
+            <h2>Transcript 2</h2>
+            <p>Transcript content goes here...</p>
+            <div id="result"></div>
+          </div>
+          </div>
+        </div>
+        
+
+      </div>
+      
+    </div>
+
+    <!-- <section>
+      <h2>Responsive Design</h2>
+      <p>We ensure that your website looks great and functions properly across various devices and screen sizes.</p>
+    </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023. All rights reserved.</p>
+  </footer>
+</body>
+</html>
